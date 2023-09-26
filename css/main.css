@@ -1,0 +1,45 @@
+body {
+    background-color: grey;
+    margin: 0;
+}
+  
+main {
+    margin-top: 5%;
+}
+
+header {
+    background-color: dimgray;
+    margin: 0;
+}
+
+header h1{
+    font-family: "IceMakerR";
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+    font-size: 6em;
+}
+
+.btn {
+    margin: auto;
+    font-family: "TokinoKun";
+    width: 20%;
+    padding: 1%; 
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 25px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3; 
+}

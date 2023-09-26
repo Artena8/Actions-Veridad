@@ -3,6 +3,12 @@ function randomChoice(lst) {
   return lst[Math.floor(Math.random() * lst.length)];
 }
 
+function restartAnimation(carouselCell) {
+  carouselCell.classList.remove("flip-in-ver-left");
+  void carouselCell.offsetWidth;
+  carouselCell.classList.add("flip-in-ver-left");
+}
+
 // Partie select joueurs
 var arrayJoueur = ["anna","bannna","caann"];
 
@@ -39,6 +45,7 @@ fetch(cheminFichierVeridad)
 
     button.addEventListener("click", (event) => {
       // change les var a chaque click
+      restartAnimation(button);
       JoueurChoisi.textContent = "Joueur  " + randomChoice(arrayJoueur);
       VeriteChoisie.textContent = randomChoice(Veridads);
     });
