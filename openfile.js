@@ -5,11 +5,10 @@ function randomChoice(lst) {
 
 // Partie select joueurs
 var arrayJoueur = ["anna","bannna","caann"];
-var Joueur = randomChoice(arrayJoueur);
 
 // init qui commence
 var JoueurChoisi = document.getElementById("Joueur");
-JoueurChoisi.textContent = "Joueur : " + randomChoice(Joueur);
+JoueurChoisi.textContent = "Joueur " + randomChoice(arrayJoueur);
 
 // chemin fichier avec les actions ou vérité
 const cheminFichierVeridad = './veridad.txt';
