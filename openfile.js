@@ -10,48 +10,51 @@ function restartAnimation(carouselCell) {
 }
 
 // Partie select joueurs
-var arrayJoueur = ["anna","bannna","caann"];
+var Joueurs;
 
-// init qui commence
+if (window.arrayJoueur && window.arrayJoueur.length > 0) {
+  Joueurs = window.arrayJoueur;
+} else {
+  Joueurs = ["Joueur 1", "Joueur 2", "Joueur 3"];
+}
+
+// Initialisation du joueur choisi
 var JoueurChoisi = document.getElementById("Joueur");
-JoueurChoisi.textContent = "Joueur " + randomChoice(arrayJoueur);
+JoueurChoisi.textContent = "Joueur " + randomChoice(Joueurs);
 
-// chemin fichier avec les actions ou vérité
+// Chemin du fichier avec les actions ou vérité
 const cheminFichierVeridad = './veridad.txt';
 
-// Trouver où sera renvoyer l'action
+// Trouver où sera renvoyée l'action
 var VeriteChoisie = document.getElementById("Veridad");
-// Mettre en array (Veridads) le fichier .txt
+// Mettre dans un tableau (Veridads) le contenu du fichier .txt
 var Veridads = [];
 
 // On rentre dans le fichier (TRY CATCH)
 fetch(cheminFichierVeridad)
-  // On transforme en texte pour ne pas avoir de problème (ex image)
+  // On transforme le contenu en texte
   .then(response => response.text())
   .then(contenu => {
-    // On sépare en ligne pour les mettre en elem de l'array
+    // On sépare le contenu en lignes pour les mettre dans un tableau
     const lignes = contenu.split('\n');
 
-    // Ecris dans l'array
+    // Remplissage de l'array Veridads avec les lignes du fichier
     lignes.forEach(ligne => {
-        Veridads.push(ligne);
+      Veridads.push(ligne);
     });
-    
-    // init la 1ere action
+
+    // Initialisation de la première action
     VeriteChoisie.textContent = randomChoice(Veridads);
 
-    // EVENT LISTENER
-    const button = document.getElementById("carousel-cell");
+    const button = document.getElementById("carousel-cell"); 
 
     button.addEventListener("click", (event) => {
-      // change les var a chaque click
+      // Change les valeurs à chaque clic
       restartAnimation(button);
-      JoueurChoisi.textContent = "Joueur  " + randomChoice(arrayJoueur);
+      JoueurChoisi.textContent = "Joueur " + randomChoice(Joueurs);
       VeriteChoisie.textContent = randomChoice(Veridads);
     });
   })
   .catch(err => {
     console.error('Une erreur s\'est produite : ', err);
   });
-
-
