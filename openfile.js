@@ -3,6 +3,7 @@ function randomChoice(lst) {
   return lst[Math.floor(Math.random() * lst.length)];
 }
 
+// Fonction restart animation de la carte
 function restartAnimation(carouselCell) {
   carouselCell.classList.remove("flip-in-ver-left");
   void carouselCell.offsetWidth;
