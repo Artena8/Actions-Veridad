@@ -3,7 +3,8 @@ let arrayJoueur;
 const form = document.getElementById("form");
 
 form.addEventListener("submit", function (event) {
-  const arrayJoueur = form.querySelectorAll("input[type='text']");
+  arrayJoueur = Array.from(form.querySelectorAll("input[type='text']")).map(input => input.value);
+  localStorage.setItem('joueurs', JSON.stringify(arrayJoueur))
 });
 
-window.arrayJoueur = arrayJoueur;
+

@@ -13,15 +13,16 @@ function restartAnimation(carouselCell) {
 // Partie select joueurs
 var Joueurs;
 
-if (window.arrayJoueur && window.arrayJoueur.length > 0) {
-  Joueurs = window.arrayJoueur;
+if (JSON.parse(localStorage.getItem('joueurs')).length > 0) {
+  Joueurs = JSON.parse(localStorage.getItem('joueurs'));
 } else {
   Joueurs = ["Joueur 1", "Joueur 2", "Joueur 3"];
 }
 
 // Initialisation du joueur choisi
 var JoueurChoisi = document.getElementById("Joueur");
-JoueurChoisi.textContent = "Joueur " + randomChoice(Joueurs);
+var joueurRandom = randomChoice(Joueurs);
+JoueurChoisi.textContent = "Joueur " + joueurRandom;
 
 // Chemin du fichier avec les actions ou vérité
 const cheminFichierVeridad = './veridad.txt';
@@ -52,7 +53,12 @@ fetch(cheminFichierVeridad)
     button.addEventListener("click", (event) => {
       // Change les valeurs à chaque clic
       restartAnimation(button);
-      JoueurChoisi.textContent = "Joueur " + randomChoice(Joueurs);
+      var newJoueurRandom = randomChoice(Joueurs);
+      while (newJoueurRandom == joueurRandom) {
+        newJoueurRandom = randomChoice(Joueurs);
+      }
+      joueurRandom = newJoueurRandom;
+      JoueurChoisi.textContent = "Joueur " + joueurRandom;
       VeriteChoisie.textContent = randomChoice(Veridads);
     });
   })
