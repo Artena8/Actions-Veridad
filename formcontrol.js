@@ -20,7 +20,7 @@ $(document).ready(function() {
     $("#deleteInput").click(function() {
         var currentChamps = $("#champ-container").children("input").length;
 
-        if (currentChamps > 0) {
+        if (currentChamps > 1) {
             $("#champ-container :last-child").remove();
             $("#champ-container :last-child").remove();
         } else {
