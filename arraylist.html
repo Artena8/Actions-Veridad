@@ -12,17 +12,25 @@
 </head>
 <body>
     <header>
-        <h1>Lister vos joueurs</h1>
+        <h1>Lister vos joueurs </h1>
+        <h2>(Maximum 10 joueurs)</h2>
     </header>
     <main>
         <form id="form" action="cards.html"> 
-            <input type="text" name="champ1" value="ana"> <br>
-            <input type="text" name="champ2" value="bddzr"> <br>
-            <input type="text" name="champ3" value="Valadeur"> <br>
+            <div id="champ-container">
+                <input type="text" name="champ1" value="ana"> <br>
+                <input type="text" name="champ2" value="bddzr"> <br>
+                <input type="text" name="champ3" value="Valadeur"> <br>
+            </div>
             <input type="submit" value="Envoyer">
             <input type="reset" value="Effacer">
+            <button type="button" id="addInput">+</button>
+            <button type="button" id="deleteInput">-</button>
         </form>
     </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script type="text/javascript" src="./arrayform.js"></script>
+<script type="text/javascript" src="./formcontrol.js"></script>
+
 </html>
