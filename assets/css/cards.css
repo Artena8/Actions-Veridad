@@ -1,4 +1,6 @@
-
+body {
+  background-image: url("../img/32.gradients.ray.st.png");
+}
 
 .carousel {
   font-family: "MadeInfinity_L";
@@ -31,4 +33,11 @@
 .carousel .carousel-cell .Veridad {
   overflow-wrap: break-word;
   font-size: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .carousel-cell{
+    margin-top: 6rem!important;
+    width: 80%;
+  }
 }

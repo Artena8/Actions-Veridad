@@ -1,0 +1,118 @@
+:root {
+    --MainBlue : #538fff;
+    --MainFont : "MadeInfinity_T";
+}
+
+* {
+    font-family: var(--MainFont);
+}
+
+
+body {
+    background-image: url("../img/32.gradients.ray.st.png");
+    color: var(--MainBlue) ;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 2%;
+}
+
+h1 {
+    font-family: "MadeInfinity_B";
+    text-align: center;
+    font-size: 4rem;
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+form input[type="text"] {
+    width: 93%;
+    display: block;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid var(--MainBlue);
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+}
+
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+form .fl-controls{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form .fl-controls button{
+    width: 5%;
+    background: transparent;
+    border: 2px solid var(--MainBlue);
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+form .fl-controls input[type="reset"], form .fl-controls input[type="submit"] {
+    width: 10%;
+    background: transparent;
+    border: 2px solid var(--MainBlue);
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+form .fl-controls button:active, form .fl-controls input[type="reset"]:active, form .fl-controls input[type="submit"]:active{
+    background-color: var(--MainBlue);
+}
+
+
+@media screen and (max-width: 1500px) {
+    form .fl-controls button{
+        width: 15%;
+    }    
+    form .fl-controls input[type="reset"], form .fl-controls input[type="submit"] {
+        width: 20%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 3rem;
+    }
+    form {
+        width: 70%;
+        margin-left: 12%;
+    }
+    form .fl-controls button{
+        width: 15%;
+    }    
+    form .fl-controls input[type="reset"], form .fl-controls input[type="submit"] {
+        width: 35%;
+    }
+}

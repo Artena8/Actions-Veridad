@@ -8,7 +8,8 @@ $(document).ready(function() {
         if (currentChamps < maxChamps) { //control
             var newInput = $("<input>").attr({ // nom du champ | attr = attributs (name = ??)
                 type: "text",
-                name: "champ" + (currentChamps + 1) // autoincrément
+                name: "champ" + (currentChamps + 1), // autoincrément
+                placeholder: "ex : Joueur " + (currentChamps + 1)
             });
 
             $("#champ-container").append(newInput).append("<br>"); //ajout

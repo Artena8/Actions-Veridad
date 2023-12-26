@@ -1,3 +1,8 @@
+:root {
+    --MainBlue : #538fff;
+    --MainFont : "MadeInfinity_T";
+}
+
 body {
     background-image: url("../img/32.gradients.ray.st.png");
 }
@@ -9,7 +14,7 @@ body {
     width: 275px;
     height: 275px;
     border-radius: 10px;
-    background: #538fff;
+    background: var(--MainBlue);
     box-shadow: 0px 8px 9.1px 3px var(--MainBlur, rgba(26, 5, 36, 0.49));
     justify-content: center;
     align-items: center;
@@ -22,7 +27,7 @@ body {
     width: 205px;
     height: 55px;
     border-radius: 10px;
-    background: #538fff;
+    background: var(--MainBlue);
     box-shadow: 0px 8px 9.1px 3px var(--MainBlur, rgba(26, 5, 36, 0.49));
     justify-content: center;
     align-items: center;
@@ -32,7 +37,7 @@ body {
 .main-btn a{
     text-decoration: none;
     color: #000;
-    font-family: IBM Plex Mono;
+    font-family: var(--MainFont);
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/fonts.css" rel="stylesheet" />
-    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link href="./assets/css/form.css" rel="stylesheet" />
     <link href="./assets/css/animations.css" rel="stylesheet" />
     <link href="./assets/css/cards.css" rel="stylesheet" />
     
@@ -18,14 +18,16 @@
     <main>
         <form id="form" action="cards.html"> 
             <div id="champ-container">
-                <input type="text" name="champ1" value="ana"> <br>
-                <input type="text" name="champ2" value="bddzr"> <br>
-                <input type="text" name="champ3" value="Valadeur"> <br>
+                <input type="text" name="champ1" placeholder="ex : Joueur 1"> <br>
+                <input type="text" name="champ2" placeholder="ex : Joueur 2"> <br>
+                <input type="text" name="champ3" placeholder="ex : Joueur 3"> <br>
             </div>
-            <input type="submit" value="Envoyer">
-            <input type="reset" value="Effacer">
-            <button type="button" id="addInput">+</button>
-            <button type="button" id="deleteInput">-</button>
+            <div class="fl-controls">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+                <button type="button" id="addInput">+</button>
+                <button type="button" id="deleteInput">-</button>
+            </div>
         </form>
     </main>
 </body>
