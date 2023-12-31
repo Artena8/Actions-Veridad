@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Nombre de joueurs max
-    var maxChamps = 10;
+    var maxChamps = 20;
 
     $("#addInput").click(function() { //Listener btn add
         var currentChamps = $("#champ-container").children("input").length; // children(filter) IMPORTANT sinon prend le br aussi
